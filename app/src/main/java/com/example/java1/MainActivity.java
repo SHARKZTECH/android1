@@ -6,6 +6,7 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,9 +23,13 @@ public class MainActivity extends AppCompatActivity {
         Button b=(Button) v;
         b.setText("Disabled");
 
+        EditText inp=findViewById(R.id.input);
+        String text=inp.getText().toString();
+        inp.setText("");
+
         View txt=findViewById(R.id.text);
         TextView textView=(TextView) txt;
-        textView.setText("Sharkz Reigns");
+        textView.setText(text);
 
     }
 }
