@@ -3,6 +3,7 @@ package com.example.java1;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,20 +20,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @SuppressLint("SetTextI18n")
-    public void disable(View v){
-//        v.setEnabled(false);
-//        Button b=(Button) v;
-//        b.setText("Disabled");
-
-        EditText inp=findViewById(R.id.input);
-        String text=inp.getText().toString();
-        inp.setText("");
-
-        View txt=findViewById(R.id.text);
-        TextView textView=(TextView) txt;
-        textView.setText(text);
-
-        Toast.makeText(this,text,Toast.LENGTH_LONG).show();
+    public void launchSettings(View v){
+        Intent i=new Intent(this,SettingsActivity.class);
+        startActivity(i);
+        Toast.makeText(this,"Settings opened",Toast.LENGTH_LONG).show();
 
     }
 }

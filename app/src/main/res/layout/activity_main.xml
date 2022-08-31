@@ -19,25 +19,12 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="98dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="296dp"
-        android:onClick="disable"
+        android:layout_width="138dp"
+        android:layout_height="55dp"
+        android:onClick="launchSettings"
         android:text="@string/button1"
-        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="32dp" />
-
-    <EditText
-        android:id="@+id/input"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:text="Name"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="32dp" />
+        tools:layout_editor_absoluteX="127dp"
+        tools:layout_editor_absoluteY="38dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
