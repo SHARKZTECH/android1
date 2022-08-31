@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,9 +20,9 @@ public class MainActivity extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     public void disable(View v){
-        v.setEnabled(false);
-        Button b=(Button) v;
-        b.setText("Disabled");
+//        v.setEnabled(false);
+//        Button b=(Button) v;
+//        b.setText("Disabled");
 
         EditText inp=findViewById(R.id.input);
         String text=inp.getText().toString();
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
         View txt=findViewById(R.id.text);
         TextView textView=(TextView) txt;
         textView.setText(text);
+
+        Toast.makeText(this,text,Toast.LENGTH_LONG).show();
 
     }
 }
