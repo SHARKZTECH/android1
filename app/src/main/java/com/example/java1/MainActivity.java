@@ -23,7 +23,10 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("SetTextI18n")
     public void launchSettings(View v){
         Intent i=new Intent(this,SettingsActivity.class);
-        i.putExtra("Name","Sharkz Reigns");
+
+        EditText ipt=findViewById(R.id.inputText);
+        String input=ipt.getText().toString();
+        i.putExtra("Name",input);
         startActivity(i);
         Toast.makeText(this,"Settings opened",Toast.LENGTH_LONG).show();
 
